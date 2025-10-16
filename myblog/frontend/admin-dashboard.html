@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | MyBlog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-700 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-white text-2xl font-bold">Admin Dashboard</h1>
+      <ul class="flex space-x-6 text-white">
+        <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+        <li><a href="addpost.html" class="hover:text-yellow-300">Add Post</a></li>
+        <li><a href="login.html" class="hover:text-yellow-300">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="max-w-6xl mx-auto p-8">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-6 text-center">Manage Your Blog Posts</h2>
+
+    <!-- Posts Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow-lg rounded-xl">
+        <thead class="bg-indigo-600 text-white">
+          <tr>
+            <th class="py-3 px-4 text-left">Title</th>
+            <th class="py-3 px-4 text-left">Category</th>
+            <th class="py-3 px-4 text-left">Date</th>
+            <th class="py-3 px-4 text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="postTable" class="text-gray-700">
+          <!-- Posts will be loaded dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-800 text-white text-center py-4">
+    <p>© 2025 MyBlog. Admin Panel | Designed by Saqlain</p>
+  </footer>
+
+  <script>
+    // Dummy posts for now (connect with backend later)
+    const posts = [
+      { title: "The Power of Healthy Eating", category: "Health", date: "Oct 10, 2025" },
+      { title: "AI in Modern Science", category: "Science", date: "Oct 11, 2025" },
+      { title: "10 Best Street Foods in Pakistan", category: "Food", date: "Oct 12, 2025" },
+    ];
+
+    const postTable = document.getElementById("postTable");
+
+    posts.forEach((p, i) => {
+      const row = document.createElement("tr");
+      row.classList.add("border-b", "hover:bg-gray-50");
+      row.innerHTML = `
+        <td class="py-3 px-4">${p.title}</td>
+        <td class="py-3 px-4">${p.category}</td>
+        <td class="py-3 px-4">${p.date}</td>
+        <td class="py-3 px-4 flex justify-center space-x-3">
+          <button onclick="editPost(${i})" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</button>
+          <button onclick="deletePost(${i})" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
+        </td>
+      `;
+      postTable.appendChild(row);
+    });
+
+    function editPost(index) {
+      alert(`Editing post: ${posts[index].title}`);
+    }
+
+    function deletePost(index) {
+      if (confirm(`Are you sure you want to delete "${posts[index].title}"?`)) {
+        posts.splice(index, 1);
+        location.reload();
+      }
+    }
+  </script>
+</body>
+</html>

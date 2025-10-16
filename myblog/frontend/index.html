@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBlog - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-indigo-600 shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 class="text-white text-2xl font-bold">MyBlog</h1>
+        <ul class="flex space-x-6 text-white">
+          <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+          <li><a href="addpost.html" class="hover:text-yellow-300">Add Post</a></li>
+          <li><a href="login.html" class="hover:text-yellow-300">Login</a></li>
+          <li><a href="signup.html" class="hover:text-yellow-300">Signup</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-16">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-4">Welcome to MyBlog</h2>
+        <p class="text-lg">Explore insights on Food, Health, and Science from our latest posts.</p>
+      </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="max-w-6xl mx-auto py-12 px-6">
+      <h3 class="text-3xl font-semibold text-center mb-10 text-indigo-700">Latest Blogs</h3>
+
+      <div id="posts" class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+        <!-- Example Post 1 -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Food" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2 text-indigo-600">Healthy Food Habits</h4>
+            <p class="text-gray-600">Discover how balanced diets can boost your energy and immunity naturally.</p>
+          </div>
+        </div>
+
+        <!-- Example Post 2 -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Science" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2 text-indigo-600">Future of Science</h4>
+            <p class="text-gray-600">Explore the latest discoveries in AI, robotics, and space exploration.</p>
+          </div>
+        </div>
+
+        <!-- Example Post 3 -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://images.unsplash.com/photo-1557682250-33bd709cbe85" alt="Health" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2 text-indigo-600">Mental Health Awareness</h4>
+            <p class="text-gray-600">Understand the importance of mental well-being and daily mindfulness.</p>
+          </div>
+        </div>
+
+        <!-- Example Post 4 -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://images.unsplash.com/photo-1512058564366-c9e3e046a54e" alt="Technology" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2 text-indigo-600">Tech in Healthcare</h4>
+            <p class="text-gray-600">See how technology is transforming the way we diagnose and treat diseases.</p>
+          </div>
+        </div>
+
+        <!-- Example Post 5 -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352" alt="Nutrition" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2 text-indigo-600">Superfoods Explained</h4>
+            <p class="text-gray-600">Learn what makes certain foods “super” and how they benefit your health.</p>
+          </div>
+        </div>
+
+        <!-- Example Post 6 -->
+        <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition">
+          <img src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143" alt="Lifestyle" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h4 class="text-xl font-semibold mb-2 text-indigo-600">Healthy Lifestyle Tips</h4>
+            <p class="text-gray-600">Practical tips for living a healthier, more active, and fulfilling life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="bg-indigo-100 py-12">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold text-indigo-700 mb-6">Contact Us</h3>
+        <p class="text-gray-700 mb-4">Have questions or suggestions? Reach out to us!</p>
+        <form class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+          <input type="text" placeholder="Your Name" class="w-full mb-3 border border-gray-300 rounded-lg px-3 py-2">
+          <input type="email" placeholder="Your Email" class="w-full mb-3 border border-gray-300 rounded-lg px-3 py-2">
+          <textarea placeholder="Your Message" rows="4" class="w-full mb-3 border border-gray-300 rounded-lg px-3 py-2"></textarea>
+          <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-700 text-white text-center py-4">
+      <p>© 2025 MyBlog. All rights reserved. | Designed by Saqlain</p>
+    </footer>
+
+  </body>
+</html>
